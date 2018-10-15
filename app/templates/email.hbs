@@ -1,0 +1,16 @@
+{{#link-to "index"}}
+  Back
+{{/link-to}}
+<br />
+
+<img src = "/assets/images/trashcan.png" class = "trash" onclick={{action "deletePost" model}}/>
+<p><strong>ID:</strong> {{model.id}}</p>
+<p><strong>From:</strong> {{model.from}}</p>
+<p><strong>To:</strong> {{model.to}}</p>
+
+<p>
+  <strong>Subject:</strong> {{model.subject}}
+</p>
+<p>
+  <strong>Message:</strong> {{model.message}}
+</p>

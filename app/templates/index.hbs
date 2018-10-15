@@ -1,0 +1,15 @@
+<ul>
+  {{#each model as |email|}}
+    {{#link-to "email" email.id}}
+      From: {{email.from}}
+    {{/link-to}}
+    <p class="truncate">
+      {{email.message}}
+    </p>
+    <!-- {{#link-to "edit" email.id}}
+      Edit
+    {{/link-to}}     -->
+  {{/each}}
+</ul>
+
+{{outlet}}

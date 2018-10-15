@@ -1,0 +1,23 @@
+<form onsubmit={{action "createPost"}}>
+  <div class = "flex">
+    <p class = "spacing">From:</p>
+    {{input type="text" id="from" value=from}}
+  </div>
+
+  <div class = "flex">
+    <p class = "spacing">To:</p>
+    {{input type="text" id="to" value=to}}
+  </div>
+
+  <div class = "flex">
+    <p class = "spacing" >Subject:</p>
+    {{input type="text" id="subject" value=subject}}
+  </div>
+
+  <div class = "flex">
+    <p class = "spacing" >Message:</p>
+    {{textarea rows="8" cols="80" value=message}}
+  </div>
+
+  <button type="submit">Publish</button>
+</form>

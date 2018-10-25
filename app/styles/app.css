@@ -1,9 +1,9 @@
-.truncate {
+/* .truncate {
   width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} */
 
 .flex{
   display: flex;
@@ -17,4 +17,9 @@
 .spacing{
   margin: 0px;
   width: 100px;
+}
+
+.star{
+  width: 30px;
+  height: 30px;
 }

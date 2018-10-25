@@ -1,0 +1,8 @@
+<p>
+  {{#link-to "email" email.id}}
+    From: {{email.from}}
+  {{/link-to}}
+  <p class="truncate">
+    {{truncate-text email.message 50}}
+  </p>
+</p>

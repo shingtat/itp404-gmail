@@ -3,20 +3,20 @@
 <strong>Starred</strong>
 <ul>
   {{#each model as |email|}}
-  {{#if email.starred}}
-    <StarButton @starred={{email.starred}} @onClick={{action "star" email}} />
-    <SingleEmail @email={{email}} />
-  {{/if}}
+    {{#if email.starred}}
+      <StarButton @starred={{email.starred}} @onClick={{action "star" email}} />
+      <SingleEmail @email={{email}} />
+    {{/if}}
   {{/each}}
 </ul>
 
 <strong>Other</strong>
 <ul>
   {{#each model as |email|}}
-  {{#unless email.starred}}
-    <StarButton @starred={{email.starred}} @onClick={{action "star" email}} />
-    <SingleEmail @email={{email}} />
-  {{/unless}}
+    {{#unless email.starred}}
+      <StarButton @starred={{email.starred}} @onClick={{action "star" email}} />
+      <SingleEmail @email={{email}} />
+    {{/unless}}
   {{/each}}
 </ul>
 {{outlet}}

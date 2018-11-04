@@ -1,9 +1,15 @@
 {{#link-to "index"}}
   Back
 {{/link-to}}
-<br />
+<br>
 
-<img src = "/assets/images/trashcan.png" class = "trash" onclick={{action "deletePost" model}}/>
+<img
+  src = "/assets/images/trashcan.png"
+  alt = "trash"
+  class = "trash"
+  onclick={{action "deletePost" model}}
+  role="button"
+>
 <p><strong>ID:</strong> {{model.id}}</p>
 <p><strong>From:</strong> {{model.from}}</p>
 <p><strong>To:</strong> {{model.to}}</p>

@@ -19,4 +19,8 @@ module('Integration | Component | star-button', function(hooks) {
      await render(hbs`{{star-button starred=starTest}}`);
      assert.equal(this.element.querySelector('img').getAttribute('src'), '/assets/images/transparent-star.png');
   });
+
+  // test('onClick called with new starred value', async function(assert) {
+  //    assert.step(this.element.click);
+  // });
 });

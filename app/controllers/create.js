@@ -13,8 +13,8 @@ export default Controller.extend({
       });
 
       email.save().then(() => {
-        // this.transitionToRoute('index');
-        this.transitionToRoute('email', email.id);
+        this.transitionToRoute('index');
+        //this.transitionToRoute('email', email.id);
       });
     }
   }

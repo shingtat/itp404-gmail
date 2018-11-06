@@ -4,19 +4,20 @@
 <br>
 
 <img
+  data-test = "delete-email"
   src = "/assets/images/trashcan.png"
   alt = "trash"
   class = "trash"
   onclick={{action "deletePost" model}}
   role="button"
 >
-<p><strong>ID:</strong> {{model.id}}</p>
-<p><strong>From:</strong> {{model.from}}</p>
-<p><strong>To:</strong> {{model.to}}</p>
+<p data-test = "email-id"><strong>ID:</strong> {{model.id}}</p>
+<p data-test = "email-from"><strong>From:</strong> {{model.from}}</p>
+<p data-test = "email-to"><strong>To:</strong> {{model.to}}</p>
 
-<p>
+<p data-test = "email-subject">
   <strong>Subject:</strong> {{model.subject}}
 </p>
-<p>
+<p data-test = "email-message">
   <strong>Message:</strong> {{model.message}}
 </p>

@@ -1,8 +1,23 @@
-<p>
-  {{#link-to "email" email.id}}
-    From: {{email.from}}
-  {{/link-to}}
-  <p class="truncate">
-    {{truncate-text email.message 50}}
+{{#if email.starred}}
+  <p data-test = "starred">
+    {{#link-to "email" email.id}}
+      {{#if email}}
+        From: {{email.from}}
+      {{/if}}
+    {{/link-to}}
+    <p class="truncate">
+      {{truncate-text email.message 50}}
+    </p>
   </p>
-</p>
+{{else}}
+  <p data-test = "unstarred">
+    {{#link-to "email" email.id}}
+      {{#if email}}
+        From: {{email.from}}
+      {{/if}}
+    {{/link-to}}
+    <p class="truncate">
+      {{truncate-text email.message 50}}
+    </p>
+  </p>
+{{/if}}

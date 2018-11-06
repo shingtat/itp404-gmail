@@ -6,21 +6,17 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | star-button', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('star is filled when starred is true', async function(assert) {
+     // set the outer context to red
+     this.set('starTest', true);
 
-    await render(hbs`{{star-button}}`);
+     await render(hbs`{{star-button starred=starTest}}`);
+     assert.equal(this.element.querySelector('img').getAttribute('src'), '/assets/images/filled-star.jpg');
+  });
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#star-button}}
-        template block text
-      {{/star-button}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+  test('star is empty when starred is false', async function(assert) {
+     this.set('starTest', false);
+     await render(hbs`{{star-button starred=starTest}}`);
+     assert.equal(this.element.querySelector('img').getAttribute('src'), '/assets/images/transparent-star.png');
   });
 });
